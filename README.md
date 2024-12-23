@@ -1,6 +1,8 @@
+![coderpad-regex-the-complete-guide.jpg](image_regex.jpg)
+
 **PATTERNS:**
 
-Some syntax:
+Metachars:
 
 1) r"\W" - spec chars without '_' | r"\w" - alphabetic chars or digital or '\_'
 2) r"\d" - digital | r"\D" - not digital
@@ -29,6 +31,19 @@ Quantifiers:
 3) {n,} - not less than 'n' | r'\w{1,}' - finds words with 1 or more chars
 4) {,m} - not more than 'm' | r'\w{,4}'
 
+Pattern with "[]"
+
+>r"[0-5]" - finds 1 number 0 to 5
+> 
+>r"[a-z]" - finds 1 char
+> 
+>r"[-sT]" - finds '-' or 's' or 'T'
+> 
+>r"[@%$]" - finds @ or % or $
+> 
+>r"[^a-z]" - finds not lower chars
+> 
+>r"[^a-z0-9]" - finds not lower chars and not numbers
 
 If you need to find some data in "{...}":
 
@@ -42,17 +57,17 @@ If you need some structure, for example coordinates in (x, y, z):
 Data for YYYY-DD-MM:
 
 >r"(?:\d{4})-(?:\d{2})-(?:\d{2})"
-
+> 
 >r"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]"
-
+> 
 >r"\d\d\d\d-\d\d-\d\d"
 
 Time HH:MM:SS:
 
 >r"(?:\d{2}):(?:\d{2}):(?:\d{2})"
-
+> 
 >r"[0-9][0-9]-[0-9][0-9]-[0-9][0-9]"
-
+>
 >r"\d\d-\d\d-\d\d"
 
 Capitalize text with spaces in quotes:
